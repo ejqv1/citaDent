@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1000793129962-u5gt79prp3iq3gsfvabub57236d997fr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1000793129962-u5gt79prp3iq3gsfvabub57236d997fr</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1000793129962-6vaa4pn1st570kpijbf0ng2acj0njenq.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDkI6d8DPuIcjITqPW1AQKXniFHp2EmWT0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1000793129962</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mycompany.citadent</string>
+	<key>PROJECT_ID</key>
+	<string>citadent-58721</string>
+	<key>STORAGE_BUCKET</key>
+	<string>citadent-58721.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1000793129962:ios:84d6825e22cfd256592893</string>
+</dict>
+</plist>
