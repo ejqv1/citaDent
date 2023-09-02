@@ -1,8 +1,10 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '../../../flutter/flutter_flow_theme.dart';
-import '../../../flutter/flutter_flow_util.dart';
-import '../../../flutter/flutter_flow_widgets.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'nav_bar_web_model.dart';
 export 'nav_bar_web_model.dart';
 
@@ -125,24 +127,26 @@ class _NavBarWebWidgetState extends State<NavBarWebWidget> {
             borderRadius: BorderRadius.circular(8.0),
           ),
         ),
-        Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(60.0, 0.0, 20.0, 0.0),
-          child: InkWell(
-            splashColor: Colors.transparent,
-            focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: () async {
-              GoRouter.of(context).prepareAuthEvent();
-              await authManager.signOut();
-              GoRouter.of(context).clearRedirectLocation();
+        Flexible(
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(60.0, 0.0, 20.0, 0.0),
+            child: InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              onTap: () async {
+                GoRouter.of(context).prepareAuthEvent();
+                await authManager.signOut();
+                GoRouter.of(context).clearRedirectLocation();
 
-              context.goNamedAuth('Login', context.mounted);
-            },
-            child: Icon(
-              Icons.logout,
-              color: FlutterFlowTheme.of(context).error,
-              size: 45.0,
+                context.goNamedAuth('Login', context.mounted);
+              },
+              child: Icon(
+                Icons.logout,
+                color: FlutterFlowTheme.of(context).error,
+                size: 45.0,
+              ),
             ),
           ),
         ),

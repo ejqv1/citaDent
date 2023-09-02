@@ -1,8 +1,10 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '../../flutter/flutter_flow_theme.dart';
-import '../../flutter/flutter_flow_util.dart';
-import '../../flutter/flutter_flow_widgets.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'login_model.dart';
 export 'login_model.dart';
 
@@ -54,7 +56,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Flexible(
+                    Expanded(
+                      flex: 1,
                       child: Align(
                         alignment: AlignmentDirectional(0.0, -1.0),
                         child: Container(
@@ -246,66 +249,72 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         .asValidator(context),
                                   ),
                                 ),
-                                Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 16.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () async {
-                                        if (_model.formKey.currentState ==
-                                                null ||
-                                            !_model.formKey.currentState!
-                                                .validate()) {
-                                          return;
-                                        }
-                                        GoRouter.of(context).prepareAuthEvent();
+                                Flexible(
+                                  flex: 1,
+                                  child: Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 16.0),
+                                      child: FFButtonWidget(
+                                        onPressed: () async {
+                                          if (_model.formKey.currentState ==
+                                                  null ||
+                                              !_model.formKey.currentState!
+                                                  .validate()) {
+                                            return;
+                                          }
+                                          GoRouter.of(context)
+                                              .prepareAuthEvent();
 
-                                        final user =
-                                            await authManager.signInWithEmail(
-                                          context,
-                                          _model.emailController.text,
-                                          _model.passwordController.text,
-                                        );
-                                        if (user == null) {
-                                          return;
-                                        }
+                                          final user =
+                                              await authManager.signInWithEmail(
+                                            context,
+                                            _model.emailController.text,
+                                            _model.passwordController.text,
+                                          );
+                                          if (user == null) {
+                                            return;
+                                          }
 
-                                        setState(() {
-                                          _model.passwordController?.clear();
-                                          _model.emailController?.clear();
-                                        });
-                                        if (valueOrDefault<bool>(
-                                                currentUserDocument?.isAdmin,
-                                                false) ==
-                                            true) {
-                                          context.pushNamedAuth(
-                                              'homeWeb', context.mounted);
-                                        } else {
-                                          context.pushNamedAuth(
-                                              'Home', context.mounted);
-                                        }
-                                      },
-                                      text: 'Iniciar sesión',
-                                      options: FFButtonOptions(
-                                        width: 370.0,
-                                        height: 44.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                            ),
-                                        elevation: 3.0,
-                                        borderRadius:
-                                            BorderRadius.circular(12.0),
+                                          setState(() {
+                                            _model.passwordController?.clear();
+                                            _model.emailController?.clear();
+                                          });
+                                          if (valueOrDefault<bool>(
+                                                  currentUserDocument?.isAdmin,
+                                                  false) ==
+                                              true) {
+                                            context.pushNamedAuth(
+                                                'homeWeb', context.mounted);
+                                          } else {
+                                            context.pushNamedAuth(
+                                                'Home', context.mounted);
+                                          }
+                                        },
+                                        text: 'Iniciar sesión',
+                                        options: FFButtonOptions(
+                                          width: 370.0,
+                                          height: 44.0,
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          iconPadding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmall
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    color: Colors.white,
+                                                  ),
+                                          elevation: 3.0,
+                                          borderRadius:
+                                              BorderRadius.circular(12.0),
+                                        ),
                                       ),
                                     ),
                                   ),

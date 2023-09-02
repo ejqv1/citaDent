@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../auth/firebase_auth/auth_util.dart';
 
-import '../flutter/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import 'schema/util/firestore_util.dart';
 
 import 'schema/user_record.dart';
@@ -183,7 +183,6 @@ Future<int> queryCollectionCount(
     query = query.limit(limit);
   }
 
-  // ignore: body_might_complete_normally_catch_error
   return query.count().get().catchError((err) {
     print('Error querying $collection: $err');
   }).then((value) => value.count);

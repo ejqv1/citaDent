@@ -1,9 +1,9 @@
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
-import '../../../flutter/flutter_flow_icon_button.dart';
-import '../../../flutter/flutter_flow_theme.dart';
-import '../../../flutter/flutter_flow_util.dart';
-import '../../../flutter/custom_functions.dart' as functions;
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'chat_model.dart';
@@ -418,7 +418,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                   ));
                                   _model.apiResultver = await ChatGPTCall.call(
                                     apiKey:
-                                        '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',
+                                        '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',
                                     mensaje: getJsonField(
                                       functions.formatearMensaje(
                                           chatMensajeRecordList.toList(),

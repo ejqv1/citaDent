@@ -1,7 +1,9 @@
-import '../../../flutter/flutter_flow_theme.dart';
-import '../../../flutter/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/webs/nav_bar_web/nav_bar_web_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'historial_model.dart';
 export 'historial_model.dart';
 

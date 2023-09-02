@@ -1,7 +1,7 @@
 import '/backend/backend.dart';
-import '../../../flutter/flutter_flow_icon_button.dart';
-import '../../../flutter/flutter_flow_theme.dart';
-import '../../../flutter/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'agendar_cita_model.dart';
 export 'agendar_cita_model.dart';
@@ -34,7 +34,9 @@ class _AgendarCitaWidgetState extends State<AgendarCitaWidget> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<List<CitasRecord>>(
-      stream: queryCitasRecord(),
+      stream: queryCitasRecord(
+        queryBuilder: (citasRecord) => citasRecord.orderBy('fecha'),
+      ),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
@@ -131,8 +133,8 @@ class _AgendarCitaWidgetState extends State<AgendarCitaWidget> {
                                         FlutterFlowTheme.of(context).titleLarge,
                                   ),
                                   subtitle: Text(
-                                    dateTimeFormat(
-                                        'MMMMEEEEd', listCitasItem.fecha!),
+                                    dateTimeFormat('EEEE/ d / MMMM h:mm a',
+                                        listCitasItem.fecha!),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                   ),
