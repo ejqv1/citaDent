@@ -1,6 +1,6 @@
-import '/flutter_flow/flutter_flow_google_map.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../../flutter/flutter_flow_google_map.dart';
+import '../../../flutter/flutter_flow_theme.dart';
+import '../../../flutter/flutter_flow_util.dart';
 import '/pages/mobil/nav_bar/nav_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'ubicacion_model.dart';

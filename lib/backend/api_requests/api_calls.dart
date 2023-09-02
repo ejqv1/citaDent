@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import '../../flutter_flow/flutter_flow_util.dart';
+import '../../flutter/flutter_flow_util.dart';
 
 import 'api_manager.dart';
 

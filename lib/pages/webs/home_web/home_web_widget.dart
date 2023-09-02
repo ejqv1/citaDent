@@ -1,7 +1,7 @@
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../../../flutter/flutter_flow_theme.dart';
+import '../../../flutter/flutter_flow_util.dart';
+import '../../../flutter/flutter_flow_widgets.dart';
 import '/pages/webs/nav_bar_web/nav_bar_web_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';

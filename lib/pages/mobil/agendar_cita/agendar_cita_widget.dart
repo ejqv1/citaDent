@@ -1,7 +1,7 @@
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../../flutter/flutter_flow_icon_button.dart';
+import '../../../flutter/flutter_flow_theme.dart';
+import '../../../flutter/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'agendar_cita_model.dart';
 export 'agendar_cita_model.dart';
