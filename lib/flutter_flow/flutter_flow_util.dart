@@ -245,6 +245,7 @@ Future<LatLng?> queryCurrentUserLocation() async {
   }
 
   final position = await Geolocator.getCurrentPosition();
+  // ignore: unnecessary_null_comparison
   return position != null && position.latitude != 0 && position.longitude != 0
       ? LatLng(position.latitude, position.longitude)
       : null;
